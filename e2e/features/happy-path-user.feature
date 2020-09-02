@@ -1,6 +1,6 @@
 Feature: The happy path
 
-  @happy-path-user  @nightly-test
+  @happy-path-user @nightly-test
   Scenario: Should end up in "Ready to list" state when ALL fields are present
     Given I am signed in as a Case Officer
     And I have a bulk-scanned document with all fields
