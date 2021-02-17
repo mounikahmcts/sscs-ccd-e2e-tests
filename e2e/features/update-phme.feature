@@ -13,9 +13,15 @@ Feature: The Update UCB
     Then the case should end in "Response received" state
     Then I should see PHME flag as "Under Review"
 
+    When I switch to be a Judge
     And I choose "Review PHME request"
     And I set PHME Granted flag to "Yes"
     Then I should see PHME flag as "Granted"
 
+    When I switch to be a Case Officer
+    And I choose "Create an edited bundle"
+    And I submit "Create an edited bundle"
+    Then The edited bundles should be successfully listed in "History" tab
+    And the case bundle details should be listed in "Bundles" tab
 
 
